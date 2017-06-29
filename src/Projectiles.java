@@ -11,6 +11,7 @@ public class Projectiles extends GameObject {
 	}
 	
 	void update(){
+		super.update();
 		y -= speed;
 		
 		if(y < 0){
@@ -19,7 +20,7 @@ public class Projectiles extends GameObject {
 	}
 
 	void draw(Graphics g){
-		g.setColor(Color.RED);
-		g.fillRect(x, y, width, height);
+		g.drawImage(GamePanel.bulletImg, x, y, width, height, null);
+
 	}
 }
